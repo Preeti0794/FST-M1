@@ -4,7 +4,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Activity3 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		  WebDriver driver = new FirefoxDriver();
 			
 	        // Open the browser
@@ -17,7 +17,8 @@ public class Activity3 {
 	        //Email
 	        driver.findElement(By.id("email")).sendKeys("charles.john@gmail.com");
 	        driver.findElement(By.id("number")).sendKeys("9898098900");
-	        
+	        //Submit
+		 Thread.sleep(5000);
 	        driver.findElement(By.cssSelector(".ui.green.button")).click();
 	        System.out.println("Application has been submitted successfully");
 	        
