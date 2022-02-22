@@ -84,9 +84,9 @@ public class FST_Project {
 		String activitiesMenu = driver.findElement(By.id("grouptab_3")).getText();
 		driver.findElement(By.id("grouptab_3")).click();
 		if (activitiesMenu.equalsIgnoreCase("Activities")) {
-			System.out.println("“Activities” menu item exists.");
+			System.out.println("â€œActivitiesâ€ menu item exists.");
 		} else {
-			System.out.println("“Activities” menu item is not exist.");
+			System.out.println("â€œActivitiesâ€ menu item is not exist.");
 		}
 	}
 
@@ -128,9 +128,10 @@ public class FST_Project {
 
 		System.out.println("Verify that account table is opened:::" + account_Table);
 
+		for (int i = 1; i <= 9; i=i+2) {
 		String name = driver
-				.findElement(By.xpath("//*[@id='MassUpdate']/div[3]/table/tbody/tr[position() mod 2=1]/td[3]"))
-				.getText();
+				.findElement(By.xpath("//*[@id=\"MassUpdate\"]//tr["+i+"]/td[3]//a")).getText();
+		
 		System.out.println("Print the name row value:::" + name);
 	}
 
